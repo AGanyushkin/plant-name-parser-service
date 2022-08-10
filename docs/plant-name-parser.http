@@ -1,0 +1,39 @@
+### OK
+POST {{url}}/api/v1/parse
+Content-Type: application/json
+
+{
+  "text": "Дуб черешчатый sel. Элсендорп"
+}
+
+
+### OK
+POST {{url}}/api/v1/parse
+Content-Type: application/json
+
+{
+  "text": "betula pendula"
+}
+
+### FAIL
+POST {{url}}/api/v1/parse
+Content-Type: application/json
+
+{
+  "text": "Красивоплодник бодиньера разн.джиральди"
+}
+
+### FAIL
+POST {{url}}/api/v1/parse
+Content-Type: application/json
+
+{
+  "text": "Тест имя разн.бла бла бла"
+}
+
+### FAIL
+POST {{url}}/api/v1/parse
+Content-Type: application/json
+
+{}
+
