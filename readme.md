@@ -87,6 +87,9 @@ docker run -i -t --rm --name plant-name-parser-service -p 8080:8080 \
 # Configuration with environment variables
 
 __PORT__ - default 8080
+
 __API_DOCS_ENABLED__ - enable api-docs, default true
+
 __MANAGEMENT_ENDPOINT_HEALTH__ - enable management health endpoint, default false
+
 __MANAGEMENT_ENDPOINT_INFO__ - enable management info endpoint, default false
