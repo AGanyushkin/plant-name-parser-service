@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: SEED API
+  version: 1.0.0
+paths:
+  /api/v1/parse:
+    post:
+      x-yc-apigateway-integration:
+        type: serverless_containers
+        container_id: xxx
+        service_account_id: yyy
+      requestBody:
+        $ref: '#/components/requestBodies/RawPlantName'
+      summary: Parse plant name and return structured plant name view
+components:
+  requestBodies:
+    RawPlantName:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RawPlantName'
+      description: A JSON object containing plant name
+      required: true
+  schemas:
+    RawPlantName:
+      properties:
+        text:
+          type: string
+      required:
+        - text
+      type: object
